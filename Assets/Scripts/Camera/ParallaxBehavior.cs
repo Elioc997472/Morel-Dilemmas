@@ -4,71 +4,61 @@ public class ParallaxBehavior : MonoBehaviour
 {
     Transform cam;
     Vector3 camStartPos;
-    float distance;
 
-    GameObject[] backgrounds;
-    Material[] mat;
+    Transform[] backgrounds;
     float[] backSpeed;
     float farthestBack;
 
-    public float parallaxSpeed;
+    public float parallaxSpeed = 0.5f;
 
     void Start()
     {
         cam = Camera.main.transform;
         camStartPos = cam.position;
 
-        int backCount = transform.childCount;
-        mat = new Material[backCount];
-        backSpeed = new float[backCount];
-        backgrounds = new GameObject[backCount];
+        int count = transform.childCount;
+        backgrounds = new Transform[count];
+        backSpeed = new float[count];
 
-        for (int i = 0; i < backCount; i++)
-        {
-            backgrounds[i] = transform.GetChild(i).gameObject;
-            mat[i] = backgrounds[i].GetComponent<Renderer>().material;
-        }
+        for (int i = 0; i < count; i++)
+            backgrounds[i] = transform.GetChild(i);
 
-        BackSpeedCalculate(backCount);
+        CalculateBackSpeed(count);
     }
 
-    void BackSpeedCalculate(int backCount)
+    void CalculateBackSpeed(int count)
     {
-        farthestBack = 0f; // 🔧 CHANGE: reset value
+        farthestBack = 0f;
 
-        for (int i = 0; i < backCount; i++)
+        for (int i = 0; i < count; i++)
         {
-            float depth = Mathf.Abs(backgrounds[i].transform.position.z - cam.position.z);
+            float depth = Mathf.Abs(backgrounds[i].position.z - cam.position.z);
             if (depth > farthestBack)
                 farthestBack = depth;
         }
 
-        if (farthestBack == 0f)
-            farthestBack = 1f; // 🔧 CHANGE: prevent divide by zero
-
-        for (int i = 0; i < backCount; i++)
+        for (int i = 0; i < count; i++)
         {
-            float depth = Mathf.Abs(backgrounds[i].transform.position.z - cam.position.z);
-            backSpeed[i] = 1f - (depth / farthestBack); // 🔧 CHANGE: fixed math + parentheses
+            float depth = Mathf.Abs(backgrounds[i].position.z - cam.position.z);
+            backSpeed[i] = 1f - (depth / farthestBack);
         }
     }
 
-    private void LateUpdate()
+    void LateUpdate()
     {
-        // 🔧 CHANGE: invert distance so direction feels natural
-        distance = camStartPos.x - cam.position.x;
-
-        // 🔧 CHANGE: make background FOLLOW the camera
-        transform.position = new Vector3(
-            cam.position.x,
-            transform.position.y,
-            transform.position.z
-        );
+        float deltaX = cam.position.x - camStartPos.x;
 
         for (int i = 0; i < backgrounds.Length; i++)
         {
             float speed = backSpeed[i] * parallaxSpeed;
-            mat[i].SetTextureOffset("_MainTex", new Vector2(distance * speed, 0));
+            Vector3 pos = backgrounds[i].position;
+            backgrounds[i].position = new Vector3(
+                pos.x + deltaX * speed,
+                pos.y,
+                pos.z
+            );
         }
+
+        camStartPos = cam.position;
     }
 }
