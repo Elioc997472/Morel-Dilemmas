@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8467284489720476528}
   - component: {fileID: 578260495059733337}
   - component: {fileID: 8555777464289860506}
+  - component: {fileID: 8864420851491180810}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orderManager: {fileID: 578260495059733337}
   inventoryManager: {fileID: 8555777464289860506}
+  customerManager: {fileID: 8864420851491180810}
 --- !u!114 &578260495059733337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +62,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d510c5b1531143458b05de253686ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentOrders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  heldOrder: {fileID: 0}
 --- !u!114 &8555777464289860506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,3 +81,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f0443c56fe32c488f3b3dcf67ed033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8864420851491180810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64593716309421285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f8440ed430b6b4da98fb6a78f7af1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleCustomers:
+  - {fileID: 3437730016611834111, guid: 463ca7d2dd2d5904184196af9f70bff3, type: 3}

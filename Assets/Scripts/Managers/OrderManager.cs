@@ -4,33 +4,18 @@ using System.Collections.Generic;
 
 public class OrderManager : MonoBehaviour
 {
-    public Dictionary<int, Recipe> currentOrders = new Dictionary<int, Recipe>();
+    // public Dictionary<int, Recipe> currentOrders = new Dictionary<int, Recipe>();
+    public Recipe[] currentOrders = new Recipe[5]; // hardcoded at 5 rn - can be changed if needed
     public Recipe heldOrder;
 
     public void AddOrder(int tableNum, Recipe recipe)
     {
-        if (currentOrders.ContainsKey(tableNum) == false)
-        {
-            currentOrders.Add(tableNum, recipe);
-        }
-        else
-        {
-            currentOrders[tableNum] = recipe;
-        }
-
-        Debug.Log("Added to orders");
+        currentOrders[tableNum] = recipe;
     }
 
     public void RemoveOrder(int tableNum)
     {
-        if (currentOrders.ContainsKey(tableNum) == false)
-        {
-            Debug.Log("Issue! This table number does not exist yet");
-        }
-        else
-        {
-            currentOrders[tableNum] = null;
-        }
+        currentOrders[tableNum] = null;
     }
 
     public void SetHeldOrder(Recipe heldOrder)
@@ -45,14 +30,7 @@ public class OrderManager : MonoBehaviour
 
     public Recipe GetRecipe(int tableNum)
     {
-        if (currentOrders.ContainsKey(tableNum))
-        {
-            return currentOrders[tableNum];
-        }
-        else
-        {
-            return null;
-        }
+        return currentOrders[tableNum];
     }
 
     public Recipe GetHeldOrder()
@@ -60,4 +38,17 @@ public class OrderManager : MonoBehaviour
         return heldOrder;
     }
 
+    public List<int> GetFreeTables()
+    {
+        List<int> rtn = new List<int>();
+        for (int i = 0; i < currentOrders.Length; i++)
+        {
+            if (currentOrders[i] == null)
+            {
+                rtn.Add(i);
+            }
+        }
+        return rtn;
+        
+    }
 }

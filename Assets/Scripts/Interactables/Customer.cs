@@ -3,16 +3,38 @@ using UnityEngine;
 public class Customer : MonoBehaviour, IInteractable
 {
     [SerializeField] private int tableNum;
-    [SerializeField] private Recipe recipe; 
+
+    //TODO: change recipe based on day, remove serialized field
+    [SerializeField] private Recipe recipe;
+    [SerializeField] private CustomerType customerType;
 
     public void OnInteract()
     {
-        //DialogueSystem.TriggerDialogue();
         Debug.Log("Interacted with! " + this.gameObject.name);
-        if (GameManager.Instance.orderManager.GetHeldOrder() != null)
+        if (GameManager.Instance.customerManager.GetTakenOrder(tableNum))
         {
-            Destroy(this.gameObject);
+            Debug.Log("You've taken my order");
+            //check held dish matching here
         }
-        GameManager.Instance.orderManager.AddOrder(tableNum, recipe);
+        else
+        {
+            GameManager.Instance.orderManager.AddOrder(tableNum, recipe);      
+            SetTakenOrder(true);
+        }
+    }
+
+    public CustomerType GetCustomerType()
+    {
+        return customerType;
+    }
+
+    public void SetTakenOrder(bool value)
+    {
+        GameManager.Instance.customerManager.SetTakenOrder(tableNum, value);
+    }
+
+    public void SetTableNum(int tableNum)
+    {
+        this.tableNum = tableNum;
     }
 }
