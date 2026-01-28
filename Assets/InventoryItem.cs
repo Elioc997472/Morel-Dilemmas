@@ -1,0 +1,58 @@
+using UnityEngine;
+using DG.Tweening;
+using UnityEngine.UI;
+using System.Collections.Generic;
+
+public class InventoryItem : MonoBehaviour
+{
+    Vector3 originalSize;
+    public bool followmouse = false;
+    public LayerMask targetLayer;
+    
+    void Start()
+    {
+        originalSize = transform.localScale;
+    }
+    
+    public void Grow()
+    {
+        transform.DOScale(originalSize * 1.5f, 0.2f);
+    }
+
+    public void Shrink()
+    {
+        transform.DOScale(originalSize * 1f, 0.2f);
+    }
+
+    public void FollowMouse()
+    {
+        AlexKitchenInventoryUI.Instance.draggedItem = this;
+        followmouse = true;
+    }
+
+    public void StopFollowMouse()
+    {
+        followmouse = false;
+        if (AlexKitchenInventoryUI.Instance != null)
+            LayoutRebuilder.ForceRebuildLayoutImmediate(AlexKitchenInventoryUI.Instance.GetComponent<RectTransform>());
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, targetLayer);
+        if (hit.collider != null)
+        {
+            transform.SetParent(hit.transform);
+            hit.transform.GetComponent<DragFoodInto>().AddItem(this);
+        }
+    }
+
+    void Update()
+    {
+        if (followmouse)
+        {
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition.z = Camera.main.WorldToScreenPoint(transform.position).z;
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            transform.position = worldPosition;
+        }
+    }
+}

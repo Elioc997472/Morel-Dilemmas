@@ -8,6 +8,7 @@ public class AlexKitchenInventoryUI : MonoBehaviour
     public GameObject itemUI;
     public Vector2 originalPosition, originalSize;
     public static AlexKitchenInventoryUI Instance;
+    public InventoryItem draggedItem;
 
     private void Awake()
     {
