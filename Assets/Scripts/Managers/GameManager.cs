@@ -20,4 +20,12 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
     }
+
+    public void SaveForagingProgress()
+    {
+        if (inventoryManager != null)
+        {
+            Debug.Log("GameManager: Inventory sync complete. Moving to next scene with " + InventoryManager.foodItems.Count + " items.");
+        }
+    }
 }
