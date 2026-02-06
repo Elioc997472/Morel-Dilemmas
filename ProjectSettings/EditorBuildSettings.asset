@@ -21,8 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Alex/Alex Restaurant.unity
     guid: 4a80bd7e0ab07b741ad6eb7228b9ae99
   - enabled: 1
-    path: Assets/Scenes/Restaurant.unity
-    guid: df30e1d2925cf2145884d8dc86eb87b9
+    path: Assets/Scenes/Anisa/Main Menu.unity
+    guid: 5565accf80c8f4accb45ec791066d43c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
