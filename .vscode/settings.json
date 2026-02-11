@@ -67,7 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Eugene-branch.slnx",
-    "dotnet.autoInsert.enableAutoInsert": false,
-    "typescript.tsserver.web.projectWideIntellisense.enabled": false
+    "dotnet.defaultSolution": "Morel-Dilemmas.slnx"
 }
