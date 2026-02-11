@@ -268,7 +268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e7d0d01462e9e48be5570ec3c3857a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tableNum: 0
   customerType: {fileID: 11400000, guid: 32c7c05d6eb0c8d49a653e02b0ce7f7a, type: 2}
 --- !u!95 &7534172003580336899
 Animator:
