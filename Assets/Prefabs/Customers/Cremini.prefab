@@ -150,8 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e7d0d01462e9e48be5570ec3c3857a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tableNum: 0
-  recipe: {fileID: 11400000, guid: ac7f02fc609fec3488fba1e628146223, type: 2}
   customerType: {fileID: 11400000, guid: 14f472d68811bec4aaecc3347380c4ba, type: 2}
 --- !u!95 &8411825028889139655
 Animator:
