@@ -1,0 +1,378 @@
+fileFormatVersion: 2
+guid: ecdb6af84bf1ed2449e9905c3da59b5e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7653173467814461371
+    second: Mushroom Pasta_0
+  - first:
+      213: -4883225990476156141
+    second: Mushroom Pasta_1
+  - first:
+      213: 3621867834724415999
+    second: Mushroom Pasta_2
+  - first:
+      213: 2738731333737813834
+    second: Mushroom Pasta_3
+  - first:
+      213: -4269938486207095395
+    second: Mushroom Pasta_4
+  - first:
+      213: -7492592622892541736
+    second: Mushroom Pasta_5
+  - first:
+      213: 7786485795835136092
+    second: Mushroom Pasta_6
+  - first:
+      213: 1687524653186543953
+    second: Mushroom Pasta_7
+  - first:
+      213: -4476977295731439062
+    second: Mushroom Pasta_8
+  - first:
+      213: 7426342686821998847
+    second: Mushroom Pasta_9
+  - first:
+      213: -173006738553780467
+    second: Mushroom Pasta_10
+  - first:
+      213: 8975345505278320583
+    second: Mushroom Pasta_11
+  - first:
+      213: -1069185402525057304
+    second: Mushroom Pasta_12
+  - first:
+      213: -1434120852301786012
+    second: Mushroom Pasta_13
+  - first:
+      213: 5856062876401346081
+    second: Mushroom Pasta_14
+  - first:
+      213: -213149491103767134
+    second: Mushroom Pasta_15
+  - first:
+      213: -5849197583059633089
+    second: Mushroom Pasta_16
+  - first:
+      213: -6318097423234138914
+    second: Mushroom Pasta_17
+  - first:
+      213: 940615446680300673
+    second: Mushroom Pasta_18
+  - first:
+      213: -7593358808196110166
+    second: Mushroom Pasta_19
+  - first:
+      213: 553563076320295906
+    second: Mushroom Pasta_20
+  - first:
+      213: 2461230619286542064
+    second: Mushroom Pasta_21
+  - first:
+      213: 3143971527750434764
+    second: Mushroom Pasta_22
+  - first:
+      213: -5399307918405694003
+    second: Mushroom Pasta_23
+  - first:
+      213: -8418230032632307534
+    second: Mushroom Pasta_24
+  - first:
+      213: 2702955472709913635
+    second: Mushroom Pasta_25
+  - first:
+      213: 628541336572038441
+    second: Mushroom Pasta_26
+  - first:
+      213: -5863874649151735253
+    second: Mushroom Pasta_27
+  - first:
+      213: -6526877933057006074
+    second: Mushroom Pasta_28
+  - first:
+      213: -992296351837530796
+    second: Mushroom Pasta_29
+  - first:
+      213: 2140248776496778027
+    second: Mushroom Pasta_30
+  - first:
+      213: -9021466915638228118
+    second: Mushroom Pasta_31
+  - first:
+      213: 9083402843940573565
+    second: Mushroom Pasta_32
+  - first:
+      213: -8813850020437746381
+    second: Mushroom Pasta_33
+  - first:
+      213: 5616116429035136595
+    second: Mushroom Pasta_34
+  - first:
+      213: -6747087792355212635
+    second: Mushroom Pasta_35
+  - first:
+      213: -7880325259410782707
+    second: Mushroom Pasta_36
+  - first:
+      213: 4534995856658686489
+    second: Mushroom Pasta_37
+  - first:
+      213: 3601026980010933495
+    second: Mushroom Pasta_38
+  - first:
+      213: -7064473678357254427
+    second: Mushroom Pasta_39
+  - first:
+      213: -4091227550093244869
+    second: Mushroom Pasta_40
+  - first:
+      213: 3001410400454897793
+    second: Mushroom Pasta_41
+  - first:
+      213: 4452467258651559076
+    second: Mushroom Pasta_42
+  - first:
+      213: 6505148818111275844
+    second: Mushroom Pasta_43
+  - first:
+      213: 7317701385168974551
+    second: Mushroom Pasta_44
+  - first:
+      213: 5021049018708543104
+    second: Mushroom Pasta_45
+  - first:
+      213: -3192822067113563460
+    second: Mushroom Pasta_46
+  - first:
+      213: 2781402017705749129
+    second: Mushroom Pasta_47
+  - first:
+      213: -6803398175318316958
+    second: Mushroom Pasta_48
+  - first:
+      213: -5784186627236792685
+    second: Mushroom Pasta_49
+  - first:
+      213: -7791195569429952763
+    second: Mushroom Pasta_50
+  - first:
+      213: 5704386157285891916
+    second: Mushroom Pasta_51
+  - first:
+      213: -5991797831698413739
+    second: Mushroom Pasta_52
+  - first:
+      213: -5002792947182925663
+    second: Mushroom Pasta_53
+  - first:
+      213: -61120506179012726
+    second: Mushroom Pasta_54
+  - first:
+      213: 7232788268333943336
+    second: Mushroom Pasta_55
+  - first:
+      213: -7764202789856032458
+    second: Mushroom Pasta_56
+  - first:
+      213: 7618516471724086954
+    second: Mushroom Pasta_57
+  - first:
+      213: -8806032323956344585
+    second: Mushroom Pasta_58
+  - first:
+      213: -630773547107134879
+    second: Mushroom Pasta_59
+  - first:
+      213: -5004688233078399476
+    second: Mushroom Pasta_60
+  - first:
+      213: -9045129079107337167
+    second: Mushroom Pasta_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mushroom Pasta_31
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 357
+        width: 1243
+        height: 767
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1044dc5552833444a976ec006cf1d7a1
+      internalID: -9021466915638228118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5932dd4421edc5e46ab7664dfba97839
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Mushroom Pasta_0: -7653173467814461371
+      Mushroom Pasta_1: 390646493
+      Mushroom Pasta_10: 283678000
+      Mushroom Pasta_11: -932855083
+      Mushroom Pasta_12: -1932060772
+      Mushroom Pasta_13: -1761440461
+      Mushroom Pasta_14: -1572435716
+      Mushroom Pasta_15: 1812718747
+      Mushroom Pasta_16: -222593456
+      Mushroom Pasta_17: 426084895
+      Mushroom Pasta_18: 756943885
+      Mushroom Pasta_19: 336334168
+      Mushroom Pasta_2: -1451501343
+      Mushroom Pasta_20: -525462229
+      Mushroom Pasta_21: 1884359633
+      Mushroom Pasta_22: -1449100503
+      Mushroom Pasta_23: 971585704
+      Mushroom Pasta_24: 649405431
+      Mushroom Pasta_25: 1309249341
+      Mushroom Pasta_26: 1570148449
+      Mushroom Pasta_27: 1925396578
+      Mushroom Pasta_28: 978745220
+      Mushroom Pasta_29: 591031418
+      Mushroom Pasta_3: -1940545583
+      Mushroom Pasta_30: -161438974
+      Mushroom Pasta_31: -9021466915638228118
+      Mushroom Pasta_32: 125523814
+      Mushroom Pasta_33: 1791526931
+      Mushroom Pasta_34: -501071990
+      Mushroom Pasta_35: 1210955680
+      Mushroom Pasta_36: -1987498778
+      Mushroom Pasta_37: -103826835
+      Mushroom Pasta_38: -1797695216
+      Mushroom Pasta_39: 1808821774
+      Mushroom Pasta_4: -354493655
+      Mushroom Pasta_40: 490479831
+      Mushroom Pasta_41: 1491429536
+      Mushroom Pasta_42: 321456314
+      Mushroom Pasta_43: -463725844
+      Mushroom Pasta_44: -1273477541
+      Mushroom Pasta_45: -689786910
+      Mushroom Pasta_46: -211519145
+      Mushroom Pasta_47: -670038152
+      Mushroom Pasta_48: -582667891
+      Mushroom Pasta_49: -1635598360
+      Mushroom Pasta_5: -2115643015
+      Mushroom Pasta_50: -1085629334
+      Mushroom Pasta_51: 1285408886
+      Mushroom Pasta_52: -182117918
+      Mushroom Pasta_6: 1672659571
+      Mushroom Pasta_7: 22777361
+      Mushroom Pasta_8: 430949450
+      Mushroom Pasta_9: 661537331
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
