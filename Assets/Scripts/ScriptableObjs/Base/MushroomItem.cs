@@ -10,6 +10,7 @@ public class MushroomItem : FoodItem
     [HideInInspector] public Sprite lookalikeSprite;  // lookalikes will be interchangeable but poisonous!
     [HideInInspector] public string lookalikeName; 
     [HideInInspector] public string lookalikeDescription;
+    [HideInInspector] public bool isGrounded;
 }
 
 [CustomEditor(typeof(MushroomItem))]
@@ -116,6 +117,7 @@ public class MushroomDataEditor : Editor
         
         var itemName = serializedObject.FindProperty("itemName");
         var itemDescription = serializedObject.FindProperty("itemDescription");
+        var isGrounded = serializedObject.FindProperty("isGrounded");
 
         // Food Item Section
         EditorGUILayout.Space(10);
@@ -123,6 +125,7 @@ public class MushroomDataEditor : Editor
         EditorGUILayout.BeginVertical("helpBox");
         EditorGUILayout.PropertyField(itemName, new GUIContent("Name"));
         EditorGUILayout.PropertyField(itemDescription, new GUIContent("Description"));
+        EditorGUILayout.PropertyField(isGrounded, new GUIContent("Is Grounded"));
         script.defaultSprite = (Sprite)EditorGUILayout.ObjectField("Default Sprite", script.defaultSprite, typeof(Sprite), false);
         EditorGUILayout.EndVertical();
 
