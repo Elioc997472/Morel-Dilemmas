@@ -6,7 +6,7 @@ public class MushroomSpawningManager : MonoBehaviour
     [SerializeField] private GameObject pickupPrefab;
     [SerializeField] private List<MushroomItem> collectibleMushrooms;
     [SerializeField] private List<ForagingProp> foragingProps;
-    [SerializeField] private GameObject ground;
+    [SerializeField] private List<ForagingProp> ground;
 
     private void Start()
     {
@@ -21,6 +21,7 @@ public class MushroomSpawningManager : MonoBehaviour
         {
             int index = (int) (Random.value * collectibleMushrooms.Count);
             MushroomItem mushroomData = collectibleMushrooms[index];
+            Debug.Log(mushroomData.name);
             Mushroom mushroom;
 
             if (mushroomData.lookalikeName != "")
@@ -42,31 +43,41 @@ public class MushroomSpawningManager : MonoBehaviour
             }
 
             //needs to differentiate from tree guys and non tree guys
-            Transform posTransform = GetSpawnSpot();
+            Transform posTransform = GetSpawnSpot(mushroomData.isGrounded);
             if (posTransform != null)
             {
                 GameObject mushroomObj = Instantiate(pickupPrefab, posTransform.position, Quaternion.identity);
                 mushroomObj.GetComponent<MushroomPickup>().SetPickupItem(mushroom);
             }
-            //find spot with prop
-            // change instantiation location
-            // run??
         }
     }
 
-    private Transform GetSpawnSpot()
+    private Transform GetSpawnSpot(bool isGrounded)
     {
-        // loop through props and determine a spot
-        foreach (ForagingProp foragingProp in foragingProps)
+        List<ForagingProp> props;
+        if (isGrounded)
         {
-            Transform spot = foragingProp.GetOpenSpot();
-            if (spot != null)
-            {
-                return spot;
-            }
+            props = ground;
         }
+        else
+        {
+            props = foragingProps;
 
-        return null;
+        }
+        // loop through props and determine a spot
+        int propIndex = Random.Range(0, props.Count);
+        Transform spot = props[propIndex].GetOpenSpot();
+        return spot;
+        // foreach (ForagingProp foragingProp in props)
+        // {
+        //     Transform spot = foragingProp.GetOpenSpot();
+        //     if (spot != null)
+        //     {
+        //         return spot;
+        //     }
+        // }
+
+        // return null;
         
     }
 }
