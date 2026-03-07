@@ -4,7 +4,6 @@ public class BodyDisposal : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("COLLIDING");
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Body")
         {
