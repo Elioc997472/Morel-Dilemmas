@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 83e49481e124ae34bb6e64885a1165aa
+guid: 084c5e2006c854841a25b2bf15b71dee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8768041848901560463
-    second: Basket_0
+      213: 3245156858556851853
+    second: Sauteed_Chanterelle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Basket_0
+      name: Sauteed_Chanterelle_0
       rect:
         serializedVersion: 2
-        x: 332
-        y: 539
-        width: 2145
-        height: 1264
+        x: 561
+        y: 361
+        width: 1235
+        height: 645
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8869834b975ea970800000000000000
-      internalID: 8768041848901560463
+      spriteID: d8624b228fc190d20800000000000000
+      internalID: 3245156858556851853
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Basket_0: 8768041848901560463
+      Sauteed_Chanterelle_0: 3245156858556851853
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
