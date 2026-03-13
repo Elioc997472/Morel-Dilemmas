@@ -5,8 +5,8 @@ public class MushroomSpawningManager : MonoBehaviour
 {
     [SerializeField] private GameObject pickupPrefab;
     [SerializeField] private List<MushroomItem> collectibleMushrooms;
-    [SerializeField] private List<ForagingProp> foragingProps;
-    [SerializeField] private List<ForagingProp> ground;
+    [SerializeField] private List<ForagingProp> foragingProps = new List<ForagingProp>();
+    [SerializeField] private List<ForagingProp> ground = new List<ForagingProp>();
 
     private void Start()
     {
@@ -43,7 +43,7 @@ public class MushroomSpawningManager : MonoBehaviour
             }
 
             //needs to differentiate from tree guys and non tree guys
-            Transform posTransform = GetSpawnSpot(mushroomData.isGrounded);
+            Transform posTransform = GetSpawnSpot(mushroomData.spawnType);
             if (posTransform != null)
             {
                 GameObject mushroomObj = Instantiate(pickupPrefab, posTransform.position, Quaternion.identity);
@@ -52,16 +52,23 @@ public class MushroomSpawningManager : MonoBehaviour
         }
     }
 
-    private Transform GetSpawnSpot(bool isGrounded)
+    private Transform GetSpawnSpot(SpawnType spawnType)
     {
         List<ForagingProp> props;
-        if (isGrounded)
+        if (spawnType == SpawnType.Ground)
         {
             props = ground;
         }
-        else
+        else if (spawnType == SpawnType.Wood)
         {
             props = foragingProps;
+        }
+        else
+        {
+            List<ForagingProp> combined = new List<ForagingProp>();
+            combined.AddRange(ground);
+            combined.AddRange(foragingProps);
+            props = combined;
 
         }
         // loop through props and determine a spot

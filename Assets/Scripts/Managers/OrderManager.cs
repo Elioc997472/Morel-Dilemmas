@@ -85,7 +85,7 @@ public class OrderManager : MonoBehaviour
             GameManager.Instance.customerManager.RemoveCustomer(tableNum);
 
             // TODO: Implement forumla
-            GameManager.Instance.starManager.IncreaseStarValue(0.5f);
+            GameManager.Instance.starManager.IncreaseStarValue(0.25f);
             if (isPoisonous == false)
             {
                 return OrderResult.Success;
@@ -100,6 +100,11 @@ public class OrderManager : MonoBehaviour
         {
             return OrderResult.Invalid;
         }
+    }
+
+    public void SetPoisonous(bool value)
+    {
+        isPoisonous = value;
     }
 
     public FoodItem SelectRandomDish()

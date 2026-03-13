@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 780644354336623614}
   - component: {fileID: 1908471861746935021}
   - component: {fileID: -5284348574549494442}
+  - component: {fileID: 4646285406403205148}
   m_Layer: 0
   m_Name: MushroomPickup
   m_TagString: Untagged
@@ -150,6 +151,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupItem: {fileID: 0}
   foodItemUI: {fileID: 914824624426779023, guid: ed8be0e49b45be64dbfaef25dadb485f, type: 3}
+--- !u!114 &4646285406403205148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4832578559212040363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
 --- !u!1 &7076115079857131467
 GameObject:
   m_ObjectHideFlags: 0

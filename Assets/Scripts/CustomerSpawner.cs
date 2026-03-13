@@ -15,7 +15,7 @@ public class CustomerSpawner : MonoBehaviour
         finishDayPanel.SetActive(false);
         GameManager.Instance.customerManager.NewDay();
         LoadData();
-        time = timeInBetween;
+        time = timeInBetween - 1;
     }
     
     private void Update()
