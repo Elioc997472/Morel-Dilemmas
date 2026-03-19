@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Cooking : MonoBehaviour
@@ -22,5 +23,16 @@ public class Cooking : MonoBehaviour
     public void MakeFifthDish()
     {
         GameManager.Instance.orderManager.SetHeldOrder(4);
+    }
+
+    public void OnMouseEnter()
+    {
+        CursorManager.changeTo(CursorType.POINTER);
+        Debug.Log("asdfkasdjf");
+    }
+
+    public void OnMouseExit()
+    {
+        CursorManager.changeTo(CursorType.ARROW);
     }
 }

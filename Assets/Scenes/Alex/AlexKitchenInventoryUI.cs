@@ -52,11 +52,13 @@ public class AlexKitchenInventoryUI : MonoBehaviour
     public void Grow()
     {
         transform.DOScale(originalSize * 2f, 0.2f);
+        CursorManager.changeTo(CursorType.POINTER);
     }
 
     public void Shrink()
     {
         transform.DOScale(originalSize, 0.2f);
+        CursorManager.changeTo(CursorType.ARROW);
     }
 
     public IEnumerator setTransform(Vector2 position, Vector2 size)

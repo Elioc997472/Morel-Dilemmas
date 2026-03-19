@@ -20,11 +20,10 @@ public class WorkStation : MonoBehaviour
 
         StopAllCoroutines();
         touching = true;
-
         var inventory = AlexKitchenInventoryUI.Instance;
         Camera.main.GetComponent<CameraTransition>().prepareMove(transform, transitionTime);
+        StartCoroutine(playerFader());
 
-        StartCoroutine(player.GetComponent<PlayerFade>().Fade(0, transitionTime));
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -36,7 +35,13 @@ public class WorkStation : MonoBehaviour
 
         var inventory = AlexKitchenInventoryUI.Instance;
         Camera.main.GetComponent<CameraTransition>().prepareMove(null, transitionTime);
-
+        CursorManager.changeTo(CursorType.ARROW);
         StartCoroutine(player.GetComponent<PlayerFade>().Fade(1, transitionTime));
+    }
+
+    private IEnumerator playerFader()
+    {
+        yield return StartCoroutine(player.GetComponent<PlayerFade>().Fade(0, transitionTime));
+        CursorManager.changeTo(CursorType.KNIFE_KITCHEN);
     }
 }
