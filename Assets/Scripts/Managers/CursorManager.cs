@@ -19,6 +19,7 @@ public class CursorManager : MonoBehaviour
     // Update is called once per frame
     public static void changeTo(CursorType newCursor){
         Texture2D newCursorTexture;
+        if(Cursor.visible == false) Cursor.visible = true;
         switch (newCursor) {
             case CursorType.POINTER:
             newCursorTexture = Resources.Load<Texture2D>("Cursors/Pointer");
@@ -40,6 +41,7 @@ public class CursorManager : MonoBehaviour
             break;
             default:
             newCursorTexture = null;
+            Cursor.visible = false;
             break;
         }
 
