@@ -35,8 +35,11 @@ public class CursorManager : MonoBehaviour
             case CursorType.KNIFE_STAB:
             newCursorTexture = Resources.Load<Texture2D>("Cursors/Knife_Stab");
             break;
-            default:
+            case CursorType.ARROW:
             newCursorTexture = Resources.Load<Texture2D>("Cursors/Arrow");
+            break;
+            default:
+            newCursorTexture = null;
             break;
         }
 

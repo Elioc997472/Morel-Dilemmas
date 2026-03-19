@@ -20,11 +20,10 @@ public class WorkStation : MonoBehaviour
 
         StopAllCoroutines();
         touching = true;
-
         var inventory = AlexKitchenInventoryUI.Instance;
         Camera.main.GetComponent<CameraTransition>().prepareMove(transform, transitionTime);
-
         StartCoroutine(player.GetComponent<PlayerFade>().Fade(0, transitionTime));
+        
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -39,4 +38,6 @@ public class WorkStation : MonoBehaviour
 
         StartCoroutine(player.GetComponent<PlayerFade>().Fade(1, transitionTime));
     }
+
+    
 }
