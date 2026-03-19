@@ -9,4 +9,5 @@ public enum CursorType
     KNIFE_KITCHEN,
     KNIFE_STAB,
     HIDE,
+    NOTHING,
 }
