@@ -35,6 +35,7 @@ public class WorkStation : MonoBehaviour
 
         var inventory = AlexKitchenInventoryUI.Instance;
         Camera.main.GetComponent<CameraTransition>().prepareMove(null, transitionTime);
+        CursorManager.changeTo(CursorType.ARROW);
         StartCoroutine(player.GetComponent<PlayerFade>().Fade(1, transitionTime));
     }
 
