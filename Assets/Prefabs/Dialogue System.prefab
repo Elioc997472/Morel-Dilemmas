@@ -92,7 +92,8 @@ MonoBehaviour:
   typewriterStyle: 1
   lettersPerSecond: 60
   wordsPerSecond: 10
-  customTypewriter: {fileID: 0}
+  customTypewriter:
+    targetObject: {fileID: 0}
   eventHandlers:
   - {fileID: 0}
 --- !u!1 &2283645083135521756
@@ -124,7 +125,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3182241016399754195}
@@ -199,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueReference:
     project: {fileID: 7545569452688597077, guid: 17885082510c2c145b1f120c8c7a3ad9, type: 3}
-    nodeName: CreminiIdle
+    nodeName: UnassignedDialogue
   dialogueRunner: {fileID: 8406724678862549012}
 --- !u!1 &2559626066131604915
 GameObject:
